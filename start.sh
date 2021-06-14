@@ -8,4 +8,4 @@ source antenv/bin/activate
 
 export "TEST=value"
 
-gunicorn --log-level=DEBUG app:app 
+gunicorn app:app --timeout 1200 --log-level=DEBUG 
