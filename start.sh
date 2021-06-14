@@ -1,5 +1,11 @@
 #!/bin/bash
-printenv
+
+set -uxv
+
 which gunicorn
+
 source antenv/bin/activate
-gunicorn app:app
+
+export "TEST=value"
+
+gunicorn --log-level=DEBUG app:app 
