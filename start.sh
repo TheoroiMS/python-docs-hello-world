@@ -1,11 +1,9 @@
 #!/bin/bash
 
-set -uxv
+set -x
 
 which gunicorn
 
-source antenv/bin/activate
-
 export "TEST=value"
 
-gunicorn app:app --timeout 1200 --log-level=DEBUG 
+gunicorn app:app --timeout 1200 #--log-level=DEBUG 
